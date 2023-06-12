@@ -25,7 +25,9 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "aws-crt": "^1.15.18",
     "daisyui": "^3.0.22",
+    "encoding": "^0.1.13",
     "prettier": "2.8.8"
   }
 }

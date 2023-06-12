@@ -1,15 +1,19 @@
 import { Auth } from "aws-amplify";
-import { Sign } from "crypto";
-
-// Sign Up
+import { string } from "zod";
 
 interface SignUpProps {
   username: string;
-  password: string;
   email: string;
+  password: string;
 }
 
-export async function SignUp({ username, password, email }: SignUpProps) {
+// Sign Up
+
+export async function registerNewUser({
+  username,
+  email,
+  password,
+}: SignUpProps) {
   try {
     const { user } = await Auth.signUp({
       username,
@@ -25,5 +29,14 @@ export async function SignUp({ username, password, email }: SignUpProps) {
     console.log(user);
   } catch (error) {
     console.log("error signing up:", error);
+  }
+}
+
+async function resendConfirmationCode(username: string) {
+  try {
+    await Auth.resendSignUp(username);
+    console.log("code resent successfully");
+  } catch (err) {
+    console.log("error resending code: ", err);
   }
 }

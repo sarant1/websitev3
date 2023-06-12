@@ -2,14 +2,15 @@
 
 import React, { FormEvent, useState } from "react";
 import { z } from "zod";
-import { Button } from "@/app/components/Button";
+import { Button } from "@/components/Button";
+import { registerNewUser } from "@/lib/auth";
 
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [errors, setErrors] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [errors, setErrors] = useState<string>("");
 
   const registerSchema = z.object({
     email: z.string().email(),
@@ -20,7 +21,7 @@ const SignUp = () => {
     }),
   });
 
-  const submitData = (e: FormEvent) => {
+  const submitData = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -28,6 +29,8 @@ const SignUp = () => {
     } catch (error) {
       if (error instanceof z.ZodError) {
         setErrors(error.issues[0].message);
+      } else {
+        await registerNewUser({ email, username, password });
       }
     }
   };
