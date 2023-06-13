@@ -26,11 +26,12 @@ const SignUp = () => {
 
     try {
       registerSchema.parse({ email, username, password, confirmPassword });
+      await registerNewUser({ email, username, password });
     } catch (error) {
       if (error instanceof z.ZodError) {
         setErrors(error.issues[0].message);
       } else {
-        await registerNewUser({ email, username, password });
+        setErrors("Something went wrong");
       }
     }
   };

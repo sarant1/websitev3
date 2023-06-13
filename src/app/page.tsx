@@ -1,18 +1,15 @@
-"use server";
+"use client";
 
-import { Amplify } from "aws-amplify";
-
+import { Amplify, Auth } from "aws-amplify";
 import React from "react";
+import awsExports from "@/aws-exports";
+
+Amplify.configure(awsExports);
+
+Auth.configure(awsExports);
 
 export default function Home() {
   console.log(process.env.REACT_APP_REGION);
-  Amplify.configure({
-    Auth: {
-      region: process.env.REACT_APP_REGION,
-      userPoolId: process.env.REACT_APP_USER_POOL_ID,
-      userPoolWebClientId: process.env.REACT_APP_USER_POOL_APP_CLIENT_ID,
-    },
-  });
 
   return (
     <div>

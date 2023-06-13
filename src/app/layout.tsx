@@ -1,8 +1,16 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { Amplify } from "aws-amplify";
+import { Amplify, Auth } from "aws-amplify";
+import awsExports from "@/aws-exports";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const inter = Inter({ subsets: ["latin"] });
+
+console.log(process.env.REACT_APP_AWS_PROJECT_REGION);
+console.log(process.env.REACT_APP_AWS_USER_POOLS_ID);
+console.log(process.env.REACT_APP_CLIENT_ID);
 
 export const metadata = {
   title: "Project X",
@@ -14,15 +22,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(process.env.REACT_APP_REGION);
-  Amplify.configure({
-    Auth: {
-      region: process.env.REACT_APP_REGION,
-      userPoolId: process.env.REACT_APP_USER_POOL_ID,
-      userPoolWebClientId: process.env.REACT_APP_USER_POOL_APP_CLIENT_ID,
-    },
-  });
-
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>

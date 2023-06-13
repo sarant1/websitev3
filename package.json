@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^5.0.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.9",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "aws-amplify": "^5.2.5",
+    "dotenv": "^16.1.4",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
@@ -25,9 +27,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "aws-crt": "^1.15.18",
     "daisyui": "^3.0.22",
-    "encoding": "^0.1.13",
     "prettier": "2.8.8"
   }
 }
