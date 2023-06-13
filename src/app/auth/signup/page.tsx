@@ -4,6 +4,16 @@ import React, { FormEvent, useState } from "react";
 import { z } from "zod";
 import { Button } from "@/components/Button";
 import { registerNewUser } from "@/lib/auth";
+import { Auth, Amplify } from "aws-amplify";
+import awsExports from "@/misc/aws-exports";
+
+try {
+  Amplify.configure(awsExports);
+  Auth.configure(awsExports);
+  console.log("Amplify configured");
+} catch (error) {
+  console.log(error);
+}
 
 const SignUp = () => {
   const [email, setEmail] = useState<string>("");
@@ -25,7 +35,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      registerSchema.parse({ email, username, password, confirmPassword });
+      // registerSchema.parse({ email, username, password, confirmPassword });
       await registerNewUser({ email, username, password });
     } catch (error) {
       if (error instanceof z.ZodError) {

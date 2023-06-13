@@ -4,9 +4,13 @@ import { Amplify, Auth } from "aws-amplify";
 import React from "react";
 import awsExports from "@/aws-exports";
 
-Amplify.configure(awsExports);
-
-Auth.configure(awsExports);
+try {
+  Amplify.configure(awsExports);
+  Auth.configure(awsExports);
+  console.log("Amplify configured");
+} catch (error) {
+  console.log(error);
+}
 
 export default function Home() {
   console.log(process.env.REACT_APP_REGION);
