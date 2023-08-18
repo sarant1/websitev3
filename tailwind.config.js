@@ -10,6 +10,7 @@ export default {
       black: "#01081b",
       white: "white",
       blue: "#35b6e0",
+      orange: "#bd5f05",
     },
   },
   plugins: [],
