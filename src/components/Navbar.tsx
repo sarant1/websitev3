@@ -4,7 +4,7 @@ interface NavBarProps {}
 
 const Navbar: React.FC<NavBarProps> = () => {
   return (
-    <div className="flex justify-center items-end gap-8 h-[8vh] text-white text-3xl font-bold font-spartan">
+    <div className="flex justify-center items-end gap-10 h-[8vh] text-white text-4xl font-bold font-spartan">
       <button>About</button>
       <button>Contact Me</button>
       <button>

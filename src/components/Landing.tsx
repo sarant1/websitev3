@@ -4,10 +4,10 @@ import { SiGithub, SiLinkedin, SiLeetcode } from "react-icons/si";
 
 const Landing: React.FC = () => {
   return (
-    <div className="h-[92vh] flex justify-center flex-col items-center font-spartan">
-      <p className="text-white mb-4">HELLO, I AM</p>
-      <h1 className="text-blue font-bold text-6xl mb-8">SAMUEL ARANT</h1>
-      <p className="text-white mb-8">WELCOME TO MY PORTFOLIO</p>
+    <div className="h-[92vh] flex justify-center flex-col items-center">
+      <p className="text-white text-2xl mb-4">HELLO, I AM</p>
+      <h1 className="text-blue font-bold text-8xl mb-8">SAMUEL ARANT</h1>
+      <p className="text-white text-2xl mb-8">WELCOME TO MY PORTFOLIO</p>
       <div className="flex gap-4 mb-32">
         <Link to="https://github.com/sarant1" target="_blank">
           <button className="transform transition duration-300 hover:scale-110">
