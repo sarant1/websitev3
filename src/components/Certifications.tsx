@@ -8,9 +8,10 @@ const Certifications: React.FC = () => {
   return (
     <div className="h-screen">
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, delay: 0.5 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2.0, delay: 0.5 }}
+        viewport={{ once: true }}
       >
         <h1 className="font-bold text-yellow text-4xl text-center mb-24">
           Certifications
@@ -21,6 +22,7 @@ const Certifications: React.FC = () => {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.5 }}
+          viewport={{ once: true }}
         >
           <img
             src={developerBadge}
@@ -35,6 +37,7 @@ const Certifications: React.FC = () => {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.5 }}
+          viewport={{ once: true }}
         >
           <img
             src={securityBadge}
@@ -49,6 +52,7 @@ const Certifications: React.FC = () => {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.5 }}
+          viewport={{ once: true }}
         >
           <img
             src={practionerBadge}

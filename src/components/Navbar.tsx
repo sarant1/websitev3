@@ -1,10 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 interface NavBarProps {}
 
 const Navbar: React.FC<NavBarProps> = () => {
   return (
-    <div className="flex justify-center items-end gap-10 h-[8vh] text-white text-4xl font-bold font-spartan">
+    <motion.div
+      className="flex justify-center items-end gap-10 h-[8vh] text-white text-4xl font-bold font-spartan"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.5, delay: 0.5 }}
+    >
       <button>About</button>
       <button>Contact Me</button>
       <button>
@@ -17,7 +24,7 @@ const Navbar: React.FC<NavBarProps> = () => {
       </button>
       <button>Resume</button>
       <button>Projects</button>
-    </div>
+    </motion.div>
   );
 };
 export default Navbar;
