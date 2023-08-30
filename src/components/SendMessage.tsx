@@ -70,7 +70,7 @@ const SendMessage: React.FC = () => {
                 placeholder="Enter Your Message"
               ></input>
             </div>
-            <button className="mx-auto mt-10 py-1 px-10 border-yellow border-solid border-2">
+            <button className="h-fit w-fit mt-4 border-yellow border-solid border-2 transition duration-500 ease-in-out hover:text-black hover:bg-yellow bg-black text-yellow px-4 py-1">
               Send Message&nbsp; &#8594;
             </button>
           </form>
