@@ -34,6 +34,7 @@ const Landing: React.FC = () => {
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5, delay: 1.1 }}
+        viewport={{ once: true }}
         className="flex gap-4 mb-32"
       >
         <Link to="https://github.com/sarant1" target="_blank">

@@ -2,6 +2,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Certifications from "./components/Certifications";
+import Projects from "./components/Projects";
+import SendMessage from "./components/SendMessage";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <Navbar />
         <Landing />
         <Certifications />
+        <Projects />
+        <SendMessage />
       </div>
     </div>
   );
