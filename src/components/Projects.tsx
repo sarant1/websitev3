@@ -1,19 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ProjectItem from "./ProjectItem";
 
 const Projects: React.FC = () => {
+  const projects = [
+    { title: "Phony Hawk ZeroG", color: "gray" },
+    { title: "Project Name", color: "green" },
+  ];
   return (
     <div className="h-[100vh]">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 2.0, delay: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <h1 className="font-bold text-yellow text-4xl text-center mb-24">
-          Projects
-        </h1>
-      </motion.div>
+      {projects.map((project) => (
+        <ProjectItem title={project.title} color={project.color} />
+      ))}
     </div>
   );
 };

@@ -6,7 +6,7 @@ const SendMessage: React.FC = () => {
   const [isEmailFocused, setIsEmailFocused] = useState<boolean>(false);
   const [isMessageFocused, setIsMessageFocused] = useState<boolean>(false);
   return (
-    <div className="h-[100vh]">
+    <div className="h-[70vh]">
       <div className="flex flex-col mx-auto w-2/3">
         <h1 className="text-center text-yellow font-bold text-4xl lg:text-7xl mb-4 ">
           Send Me a Message
