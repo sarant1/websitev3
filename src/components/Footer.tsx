@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <div className="border-t-blue border-solid border-t-[1px] h-[41vh] bg-black text-yellow pt-12 px-56 py-24">
       <div className="flex justify-between border-b-[1px] border-solid border-blue pb-8">
         <div className="flex flex-col gap-2 text-xl">
-          <div className="text-black">Samuel Arant</div>
+          <div className="">Samuel Arant</div>
           <div>123456 Tampa, FL</div>
           <div>813-123-4567</div>
           <div></div>
