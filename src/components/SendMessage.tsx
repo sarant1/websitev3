@@ -13,7 +13,7 @@ const SendMessage: React.FC = () => {
       transition={{ duration: 2.0, delay: 0.5 }}
       viewport={{ once: true }}
     >
-      <div className="h-[70vh]">
+      <div className="h-[70vh] grid place-items-center">
         <div className="flex flex-col mx-auto w-2/3">
           <h1 className="text-center text-yellow font-bold text-4xl lg:text-7xl mb-4 ">
             Send Me a Message

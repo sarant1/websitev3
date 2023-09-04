@@ -15,9 +15,15 @@ const Projects: React.FC = () => {
       desc: "Hello World",
       key: 2,
     },
+    {
+      title: "Cruddur",
+      color: "blue",
+      desc: "Hello World",
+      key: 2,
+    },
   ];
   return (
-    <div className="h-[100vh]">
+    <div className="">
       {projects.map((project) => (
         <ProjectItem project={project} key={project.key} />
       ))}
