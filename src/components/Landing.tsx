@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Landing: React.FC = () => {
   return (
-    <div className="h-[93vh] flex justify-center flex-col items-center">
+    <div className="h-[91vh] flex justify-center flex-col items-center">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
