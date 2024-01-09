@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
-import { slide as Menu } from "react-burger-menu";
+import { stack as Menu } from "react-burger-menu";
 
 export default function HomePage(): React.ReactNode {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,20 +14,23 @@ export default function HomePage(): React.ReactNode {
       <Menu
         right
         isOpen={isOpen}
-        width={"280px"}
+        width={"300px"}
         styles={styles}
         onStateChange={handleStateChange}
       >
         <ul className="space-y-4">
           <li>
-            <Link href="/about" className="text-4xl font-bold hover:text-white">
+            <Link
+              href="/about"
+              className="text-4xl font-bold text-white hover:text-gray-300"
+            >
               about
             </Link>
           </li>
           <li>
             <Link
               href="/projects"
-              className="text-4xl font-bold hover:text-white"
+              className="text-4xl font-bold text-white hover:text-gray-300"
             >
               projects
             </Link>
@@ -35,7 +38,7 @@ export default function HomePage(): React.ReactNode {
           <li>
             <Link
               href="/contact"
-              className="text-4xl font-bold hover:text-white"
+              className="text-4xl font-bold text-white hover:text-gray-300"
             >
               contact
             </Link>
@@ -43,7 +46,7 @@ export default function HomePage(): React.ReactNode {
           <li>
             <Link
               href="/contact"
-              className="text-4xl font-bold hover:text-white"
+              className="text-4xl font-bold text-white hover:text-gray-300"
             >
               resume
             </Link>
@@ -52,7 +55,7 @@ export default function HomePage(): React.ReactNode {
       </Menu>
       <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
         <h1 className="tracking-tgiht font-extrabold text-[hsl(280,100%,70%)] sm:text-[5rem]">
-          Hello World, I'm
+          Hello I'm
         </h1>
         <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
           Samuel Arant
@@ -71,14 +74,14 @@ const styles = {
     top: "36px",
   },
   bmBurgerBars: {
-    background: "#373a47",
+    background: "gray",
   },
   bmMenuWrap: {
     position: "fixed",
     height: "100%",
   },
   bmMenu: {
-    background: "#373a47",
+    background: "gray",
     padding: "2.5em 1.5em 0",
     fontSize: "1.15em",
   },
