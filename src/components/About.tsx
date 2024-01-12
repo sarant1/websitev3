@@ -3,7 +3,7 @@ import profilePic from "~/assets/teton.jpeg"; // replace with your image path
 
 const About = () => {
   return (
-    <div className="mt-10 flex flex-col items-center gap-8 p-3 md:mx-20 md:flex-row md:p-8">
+    <div className="my-10 flex flex-col items-center gap-8 p-3 md:mx-20 md:flex-row md:p-8">
       <div className="flex justify-center md:w-1/2 md:justify-end">
         <img
           src={profilePic.src}
