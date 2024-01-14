@@ -4,6 +4,8 @@ import Landing from "~/components/Landing";
 import About from "~/components/About";
 import Projects from "~/components/Projects";
 import Footer from "~/components/Footer";
+import ContactMe from "~/components/ContactMe";
+import Resume from "~/components/Resume";
 import { Divider } from "@chakra-ui/react";
 
 export default function HomePage() {
@@ -15,6 +17,9 @@ export default function HomePage() {
       <Divider />
       <Projects />
       <Divider />
+      <Resume />
+      <Divider />
+      <ContactMe />
       <Footer />
     </main>
   );

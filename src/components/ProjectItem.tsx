@@ -3,7 +3,7 @@ import { Divider } from "@chakra-ui/react";
 
 const ProjectItem: React.FC = () => {
   return (
-    <div className="container relative mx-2 h-[300px] rounded-lg border-2 border-[rgba(255,255,255,0.2)] bg-[rgba(159,90,253,0.2)] hover:border-[rgba(255,255,255,0.7)] md:w-[400px]">
+    <div className="container relative mx-2 h-[300px] rounded-lg border-2 border-[rgba(255,255,255,0.2)] bg-[rgba(159,90,253,0.2)] hover:cursor-pointer hover:border-[rgba(255,255,255,0.7)] md:w-[400px]">
       <div className="rounded-t-md bg-[rgba(255,255,255,0.2)] p-3">
         <h1 className="text-center">Project Item</h1>
       </div>
