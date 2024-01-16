@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
 
-const LinkIcons = () => {
+const LinkIcons: React.FC = () => {
   return (
     <div>
       <ul className="flex gap-4 p-4">

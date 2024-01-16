@@ -8,38 +8,43 @@ const Resume: React.FC = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   return (
     <div className="">
-      <h1 className="my-10 text-center text-4xl font-extrabold lg:text-6xl">
-        View my <span className="text-[hsl(240,100%,70%)]">Resume</span>
+      <h1 className="my-10 text-center text-4xl font-extrabold text-[hsl(240,100%,70%)] lg:text-6xl">
+        ~ <span className="text-white">Resume</span> ~
       </h1>
       <div
         className="my-10 text-center"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <button className="rounded-lg bg-[rgba(255,255,255,0.8)] p-2  px-3 text-slate-800 hover:bg-[hsl(240,30%,70%)] hover:shadow">
+        <a
+          href="https://google.com"
+          rel="noopner noreferrer"
+          target="_blank"
+          className="text-bold rounded-lg bg-[rgba(255,255,255,0.8)] p-2  px-3 text-slate-800 hover:bg-[hsl(240,30%,70%)] hover:shadow"
+        >
           Download {isHovered ? "->" : ">"}
-        </button>
+        </a>
       </div>
       <div className="my-10 flex justify-center">
         <a href="https://google.com" target="_blank" rel="noopener noreferrer">
           <img
             src={AwsDeveloperBadge.src}
             alt="AWS Developer Badge"
-            className="h-[200px] w-[200px]"
+            className="h-[120px] w-[120px] lg:h-[200px] lg:w-[200px]"
           />
         </a>
         <a href="https://google.com" target="_blank" rel="noopner noreferrer">
           <img
             src={SecurityPlusBadge.src}
             alt="Security Plus Badge"
-            className="h-[200px] w-[200px] rounded-full"
+            className="h-[120px] w-[120px] rounded-full lg:h-[200px] lg:w-[200px]"
           />
         </a>
         <a href="https://google.com" target="_blank" rel="noopner noreferrer">
           <img
             src={AwsPractionerBadge.src}
             alt="AWS Practioner Badge"
-            className="h-[200px] w-[200px]"
+            className="h-[120px] w-[120px] lg:h-[200px] lg:w-[200px]"
           />
         </a>
       </div>

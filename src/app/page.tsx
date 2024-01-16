@@ -20,6 +20,7 @@ export default function HomePage() {
       <Resume />
       <Divider />
       <ContactMe />
+      <Divider />
       <Footer />
     </main>
   );
