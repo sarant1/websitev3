@@ -8,7 +8,6 @@ interface ProjectItemProps {
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = (project) => {
-  console.log(project);
   return (
     <div className="container relative mx-2 h-[300px] rounded-lg border-2 border-[rgba(255,255,255,0.2)] bg-[rgba(159,90,253,0.2)] hover:cursor-pointer hover:cursor-pointer hover:border-[rgba(255,255,255,0.7)] md:w-[400px]">
       <a
