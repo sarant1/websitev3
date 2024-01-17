@@ -12,7 +12,6 @@ const ProjectItem: React.FC = () => {
         <p className="p-3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptate, voluptatum, voluptatibus, voluptas quae quos nesciunt
-          temporibus fugit quibusdam voluptatem doloremque? Quisquam voluptate,
         </p>
       </div>
     </div>
