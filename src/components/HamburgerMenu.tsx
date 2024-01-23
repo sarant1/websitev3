@@ -1,13 +1,14 @@
+"use client";
 import React from "react";
-import { stack as Menu } from "react-burger-menu";
+import { stack as Stack } from "react-burger-menu";
 import Link from "next/link";
 import { useState } from "react";
 
-const HamburgerMenu = () => {
+export const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <div>
-      <Menu right isOpen={isOpen} width={"300px"} styles={styles}>
+      <Stack right isOpen={isOpen} width={"300px"} styles={styles}>
         <ul className="space-y-4">
           <li>
             <Link
@@ -42,7 +43,7 @@ const HamburgerMenu = () => {
             </Link>
           </li>
         </ul>
-      </Menu>
+      </Stack>
     </div>
   );
 };
@@ -74,5 +75,3 @@ const styles = {
     display: "inline-block",
   },
 };
-
-export default HamburgerMenu;

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import HamburgerMenu from "~/components/HamburgerMenu";
+import { HamburgerMenu } from "~/components/HamburgerMenu";
 import LinkIcons from "~/components/LinkIcons";
 import Header from "~/components/Header";
 

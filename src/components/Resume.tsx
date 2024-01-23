@@ -17,7 +17,7 @@ const Resume: React.FC = () => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <a
-          href="https://google.com"
+          href="/resume"
           rel="noopner noreferrer"
           target="_blank"
           className="text-bold rounded-lg bg-[rgba(255,255,255,0.8)] p-2  px-3 text-slate-800 hover:bg-[hsl(240,30%,70%)] hover:shadow"
