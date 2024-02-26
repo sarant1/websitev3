@@ -7,11 +7,14 @@ export const HamburgerMenu: React.FC = () => {
 
   return (
     <div>
-      {isOpen ? (
-        <div className={`slide-menu ${isOpen ? "active" : ""}`}></div>
-      ) : (
-        <></>
-      )}
+      <div className={`slide-menu ${isOpen ? "active" : ""}`}>
+        <ul className="text-xl space-y-4 pt-32 pl-4">
+          <li><button><span className="font-bold">00</span> About</button></li>   
+          <li><button><span className="font-bold">01</span> Projects</button></li>
+          <li><button><span className="font-bold">02</span> Resume</button></li>  
+          <li><button><span className="font-bold">03</span> Contact</button></li> 
+        </ul>
+      </div>
       <div className="hamburger-body">
         <button
           onClick={() => setIsOpen(!isOpen)}
