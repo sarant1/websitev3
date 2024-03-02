@@ -6,13 +6,15 @@ import LinkIcons from "~/components/LinkIcons";
 import Header from "~/components/Header";
 
 const Landing = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(true);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  const toggleMenu = () => {
+    setIsVisible(!isVisible)
+  }
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY < 100) {
-        setIsVisible(true);
-      } else {
+      if (window.scrollY > 100) {
         setIsVisible(false);
       }
     };
@@ -22,9 +24,9 @@ const Landing = () => {
 
   return (
     <div>
-      <div className={isVisible ? "block" : "hidden"}>
+      <div>
         <div className="block md:hidden">
-          <HamburgerMenu />
+          <HamburgerMenu isVisible={isVisible} toggleVisibility={toggleMenu} />
         </div>
         <div className="hidden md:block">
           <Header />

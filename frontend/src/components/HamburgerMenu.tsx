@@ -1,13 +1,18 @@
 "use client";
 import React from "react";
-import { useState } from "react";
 import "./HamburgerMenu.css";
-export const HamburgerMenu: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+interface HamburgerMenuProps {
+  isVisible: boolean;
+  toggleVisibility: () => void;
+}
+
+export const HamburgerMenu: React.FC<HamburgerMenuProps> = ({isVisible, toggleVisibility}) => {
+
 
   return (
     <div>
-      <div className={`slide-menu ${isOpen ? "active" : ""}`}>
+      <div className={`slide-menu ${isVisible ? "active" : ""}`}>
         <ul className="text-xl space-y-4 pt-32 pl-4">
           <li><button><span className="font-bold">00</span> About</button></li>   
           <li><button><span className="font-bold">01</span> Projects</button></li>
@@ -17,8 +22,8 @@ export const HamburgerMenu: React.FC = () => {
       </div>
       <div className="hamburger-body">
         <button
-          onClick={() => setIsOpen(!isOpen)}
-          className={isOpen ? "opened menu" : "menu"}
+          onClick={() => toggleVisibility()}
+          className={isVisible ? "opened menu" : "menu"}
           aria-label="Main Menu"
         >
           <svg width="90" height="90" viewBox="0 0 100 100">
