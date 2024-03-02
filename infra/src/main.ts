@@ -1,14 +1,5 @@
-import { App, Stack, StackProps } from "aws-cdk-lib";
-import { Construct } from "constructs";
-import { RootStack } from "./root";
-
-export class MyStack extends Stack {
-  constructor(scope: Construct, id: string, props: StackProps = {}) {
-    super(scope, id, props);
-
-    // define resources here...
-  }
-}
+import { App } from 'aws-cdk-lib';
+import { RootStack } from './root';
 
 // for development, use account/region from cdk cli
 const devEnv = {
@@ -18,7 +9,7 @@ const devEnv = {
 
 const app = new App();
 
-new RootStack(app, "infra-dev", { env: devEnv });
+new RootStack(app, 'samuelarant-infra-dev', { env: devEnv });
 // new MyStack(app, 'infra-prod', { env: prodEnv });
 
 app.synth();
