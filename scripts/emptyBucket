@@ -1,0 +1,4 @@
+#! /bin/bash
+
+aws s3 rm s3://samuelarant.com --recursive
+aws s3 rb s3://samuelarant.com
